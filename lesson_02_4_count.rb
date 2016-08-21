@@ -2,7 +2,8 @@
 #
 # Посчитайте количество символов в каждом элементе массива:
 #
-aa = [“Ruby”, “Python”, “JavaScript”, “Java”, “.NET”, “HTML”, “Clojure”]
+aa = ['Ruby','Python',"JavaScript", 'Java', ".NET", "HTML", "Clojure"]
+
 #
 # Подсказка:
 #
@@ -12,3 +13,19 @@ aa = [“Ruby”, “Python”, “JavaScript”, “Java”, “.NET”, “HTM
 #
 # {"Ruby"=>4, "Python"=>6, "JavaScript"=>10, "Java"=>4, ".NET"=>4, "HTML"=>4, "Clojure"=>7, "Go"=>2}
 #
+
+hhh = aa.inject({}) do |memo,lang|
+  memo.merge({lang=>lang.length})
+end
+p hhh
+
+hh = {}
+# aa.each do |lang|
+#   k = {lang=>lang.length}
+#   hh.merge!(k)
+# end
+aa.each {|lang| hh.merge!({lang=>lang.length})}
+#p aa
+p hh
+
+p (aa.inject({}) {|memo,lang| memo.merge({lang=>lang.length})})
