@@ -10,16 +10,19 @@
 # p aa
 #Цикл
 a1= a2 =1
-p a1
+print "#{a1} #{a2} "
 i=0
 while i <10
   sum = a1+a2
   a1 = a2
   a2 =sum
-  p a2
+  print "#{sum} "
   i+=1
 end
+print "\n"
+
 #Рекурсия
+
 def fib (n)
   if n<3
     1
@@ -28,4 +31,4 @@ def fib (n)
   end
 end
 
-(1..10).each {|nn| p fib(nn)}
+(1..12).each {|nn| print "#{fib(nn)} "}
